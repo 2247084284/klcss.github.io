@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,inital-scale=1.0">
+		<title>klss</title>
+		<style>
+			/*整体布局和字体设置*/
+			body{
+				font-family: Arial,sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+			/*头部样式*/
+			header{
+				background-color: #333;
+				color: white;
+				text-align: center;
+				padding: 20px;
+			}
+			/*导航栏样式*/
+			nav{
+				background-color: #ccc;
+				padding: 40px;
+			}
+			nav ul{
+				list-style-type: none;/*去前面的黑点*/
+				margin: 0;/*减少字到上下边距的距离*/
+				padding: 0;/*减少字到左右边距的距离*/
+				display: flex;/*将竖向字改为横向（1）*/
+				justify-content: space-around;/*按边框分配字的位置，让横向字有间隔的分开（2）*/
+			}/*当屏幕宽度大于600px时，水平排列（由（1）（2）实现）*/
+			nav ul li{
+				flex: 1;/*向左边靠齐*/
+				text-align: center;/*居中*/
+			}
+			nav a{
+				text-decoration: none;/*去掉下划线*/
+				color: #333;
+				font-weight: bold;/*加粗字体*/
+			}
+			/*主体内容样式*/
+			main{
+				padding: 20px;
+			}
+			section{
+				margin-bottom: 20px;
+			}
+			section h2{
+				text-align: center;
+			}
+			section ul li{
+				list-style-type: none;
+				font-size: 50px;
+				margin-top: -10px;
+			}
+			section p{
+				width: 225px;
+			}
+			section a{
+				text-decoration: none;/*去掉下划线*/
+				color: #ff0000;
+				font-weight: bold;/*加粗字体*/
+			}
+			.container{
+				display: flex;
+				flex-direction: row-reverse;/*改变排列方向*/
+				align-items: flex-start;
+				justify-content: center;/*水平居中*/
+			}/*弹性盒子*/
+			section img{
+				height: 495px;
+				width: 795px;
+				border: 5px solid black;
+			}
+			@media (max-width: 600px){
+				nav ul{
+					flex-direction: column;
+				}
+				nav ul li{
+					margin-bottom: 10px;
+				}
+			}/*当屏幕宽度大于600px时，适应屏幕并且改为垂直排列*/
+			/*页脚样式*/
+			footer{
+				background-color: #333;/*边框内填充为黑色*/
+				color: white;/*字体白色*/
+				text-align: center;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>MC模组评鉴</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="https://mc.163.com/">首页</a></li>
+				<li><a href="https://www.mcmod.cn/modpack.html">推荐模组</a></li>
+				<li><a href="https://afdian.com/a/LTCat">启动器</a></li>
+				<li><a href="https://www.mcmod.cn/">游玩攻略</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section>
+				<h2>以下是我推荐的我的世界模组</h2>
+				<div class="container">
+					<img src="iii.png"/>
+					<ul>
+						<li>高质量的产品</li>
+						<p>咱们产品由著名的B站up主<a href="https://space.bilibili.com/43865538">limit小火柴</a>打造，倾尽所有一切资源和时间所打造的无敌好玩模组</p>
+						<li>优质的服务</li>
+						<p>在游玩过程中遇到所有的问题都可以向群里的水友进行提问，水友也会耐心和大家们解答</p>
+						<li>专业的团队</li>
+						<p>从这个模组创造到现在经历了许多事情，途中也有想过是否要放弃这个模组，可能因为我不是制作这个模组的up主，所以这个模组才能被大家所游玩</p>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<p>版权所有B站up主陈栋大王&copy; 2024</p>
+		</footer>
+	</body>
+</html>
